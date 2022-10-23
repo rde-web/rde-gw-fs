@@ -33,6 +33,7 @@ fastify.get('/touch', function (request, reply) {
         return reply.send(err);
     }
     reply.code(200);
+    reply.send();
   });
 });
 
@@ -42,7 +43,7 @@ fastify.get('/cat', function (request, reply) {
     reply.code(500);
     return reply.send("argument path is required");
   } 
-  getFSClient().Touch({path: path}, function(err, content) {
+  getFSClient().Cat({path: path}, function(err, content) {
     if (err) {
         reply.code(500);
         return reply.send(err);
