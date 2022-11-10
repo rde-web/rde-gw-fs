@@ -1,2 +1,2 @@
-modules:
-	@git submodule update --init --remote api/
+run:
+	@deno run --allow-net src/main.ts
