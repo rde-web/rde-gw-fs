@@ -1,4 +1,4 @@
-import { sendToCommutator } from "../../clients/commutator.ts";
+import { sendToCommutator } from "../clients/commutator.ts";
 import { Method, Status } from "./http.ts";
 
 export async function ls(req: Request):Promise<Response> {
